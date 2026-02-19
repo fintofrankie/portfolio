@@ -15,12 +15,25 @@
   margin-top: 50px;
 }
 
-.gallery img {
-  width: 100%;
-  display: block;
-  margin-bottom: 40px;
+.gallery {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
 }
 
+@media (min-width: 800px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+  }
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
   </style>
 </head>
 <body>
