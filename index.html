@@ -4,14 +4,67 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Finto Films</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
   <style>
-    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 40px; max-width: 900px; }
-    nav a { margin-right: 14px; text-decoration: none; }
-    nav { margin-bottom: 24px; }
-    .film { margin: 18px 0; }
-    .muted { opacity: 0.7; }
+    body {
+      margin: 0;
+      background: #0a0a0a;
+      color: #f5f5f5;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.7;
+      letter-spacing: -0.01em;
+    }
+
+    .container {
+      max-width: 880px;
+      margin: 100px auto;
+      padding: 0 24px;
+    }
+
+    nav {
+      margin-bottom: 80px;
+    }
+
+    nav a {
+      margin-right: 24px;
+      text-decoration: none;
+      color: #f5f5f5;
+      font-weight: 400;
+      opacity: 0.6;
+      transition: opacity 0.2s ease;
+    }
+
+    nav a:hover {
+      opacity: 1;
+    }
+
+    h1 {
+      font-size: 3.2rem;
+      font-weight: 400;
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 500;
+      margin-top: 60px;
+    }
+
+    .muted {
+      opacity: 0.5;
+      font-weight: 300;
+    }
+
+    .film {
+      margin: 40px 0;
+    }
   </style>
 </head>
+
 <body>
   <nav>
     <a href="index.html">Home</a>
@@ -30,3 +83,4 @@
   </div>
 </body>
 </html>
+
