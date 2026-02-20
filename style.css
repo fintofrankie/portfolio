@@ -90,7 +90,17 @@ a{ color:var(--fg); }
 .gallery img.featured{
   grid-column:1 / -1;
 }
+.video {
+  margin: 50px auto 0 auto;
+  max-width: 1000px;
+}
 
+.video iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 8px;
+}
 .footer{
   margin-top:110px;
   padding-top:40px;
