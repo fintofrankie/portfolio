@@ -2,6 +2,12 @@
    Finto Films — site styles
    ========================================================== */
 
+@font-face{
+  font-family:'SonyCam';
+  src:url('fonts/sonycam/sonycam-original.woff2') format('woff2');
+  font-display:swap;
+}
+
 :root{
   --bg:#0b0a09;
   --bg-2:#141210;
@@ -59,10 +65,10 @@ body::after{
   height:76px;
 }
 .brand{
-  font-family:var(--serif); font-size:26px; line-height:1;
-  text-decoration:none; letter-spacing:0;
+  font-family:'SonyCam', var(--sans); font-size:22px; line-height:1;
+  text-decoration:none; letter-spacing:.04em; text-transform:uppercase;
+  -webkit-font-smoothing:none; font-smooth:never;
 }
-.brand span{ font-style:italic; color:var(--accent); }
 .nav{ display:flex; gap:clamp(18px,3vw,40px); }
 .nav a{
   font-size:12px; font-weight:500; letter-spacing:.16em; text-transform:uppercase;
@@ -79,7 +85,7 @@ body::after{
 
 @media (max-width:560px){
   .site-header .wrap{ height:64px; }
-  .brand{ font-size:22px; }
+  .brand{ font-size:16px; }
   .nav{ gap:16px; }
   .nav a{ font-size:11px; letter-spacing:.12em; }
 }
@@ -145,7 +151,7 @@ strong{ color:var(--fg); font-weight:500; }
     linear-gradient(0deg, rgba(11,10,9,1) 0%, rgba(11,10,9,.72) 30%, rgba(11,10,9,0) 65%);
 }
 .hero .wrap{ position:relative; z-index:2; width:100%; padding-bottom:clamp(48px,8vh,96px); }
-.hero .lede{ margin-top:28px; color:rgba(239,233,225,.78); }
+.hero .lede{ margin-top:36px; color:rgba(239,233,225,.78); }
 .hero-foot{
   display:flex; flex-wrap:wrap; gap:18px 40px; align-items:center; justify-content:space-between;
   margin-top:40px; padding-top:28px; border-top:1px solid var(--hair);
@@ -268,9 +274,11 @@ strong{ color:var(--fg); font-weight:500; }
   transition:background-size .5s var(--ease), color .3s;
 }
 .big-mail:hover{ background-size:100% 2px; color:var(--accent); }
-.contact-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:32px; margin-top:clamp(56px,8vw,96px); padding-top:40px; border-top:1px solid var(--hair); }
+.contact-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:32px; margin-top:clamp(56px,8vw,96px); padding-top:40px; border-top:1px solid var(--hair); }
 .contact-grid h4{ margin:0 0 10px; font-size:11px; font-weight:500; letter-spacing:.18em; text-transform:uppercase; color:var(--faint); }
-.contact-grid p,.contact-grid a{ color:var(--fg); margin:0; font-size:15px; }
+.contact-grid p,.contact-grid a{ color:var(--fg); margin:0; font-size:15px; overflow-wrap:anywhere; }
+.contact-grid a{ text-decoration:underline; text-decoration-color:var(--hair); text-underline-offset:4px; }
+.contact-grid a:hover{ text-decoration-color:var(--accent); }
 @media (max-width:700px){ .contact-grid{ grid-template-columns:1fr; } }
 
 /* ---------- footer ---------- */
@@ -312,7 +320,7 @@ strong{ color:var(--fg); font-weight:500; }
 .skip:focus{ left:16px; top:16px; z-index:300; background:var(--fg); color:#111; padding:10px 16px; }
 
 /* hero legibility */
-.hero .eyebrow{ color:rgba(239,233,225,.8); }
+.hero .eyebrow{ max-width:none; color:rgba(239,233,225,.97); font-weight:600; text-shadow:0 1px 3px rgba(0,0,0,.75), 0 0 24px rgba(0,0,0,.6) !important; }
 .hero .eyebrow,.hero .display,.hero .lede,.film-hero .display{ text-shadow:0 2px 30px rgba(0,0,0,.45); }
 @media (max-width:700px){
   .hero::before{
@@ -322,3 +330,69 @@ strong{ color:var(--fg); font-weight:500; }
   }
   .hero-media img{ object-position:40% 60%; }
 }
+
+/* logo typeface */
+.display.logo-type{
+  font-family:'SonyCam', var(--sans); text-transform:uppercase;
+  font-size:clamp(44px,8vw,120px); line-height:1.12; letter-spacing:.02em;
+  -webkit-font-smoothing:none;
+}
+.font-credit{ text-transform:none; letter-spacing:.02em; }
+.font-credit a{ text-decoration:underline; text-underline-offset:2px; }
+
+/* tighten the open-sided F so it matches the rest of the logo's spacing */
+.brand .kf,.display .kf,.cam .kf{ margin-right:-0.19em; }
+
+/* all big titles use the SonyCam logo face */
+.display,.cam{
+  font-family:'SonyCam', var(--sans); font-weight:400; text-transform:uppercase;
+  letter-spacing:.02em; line-height:1.12; -webkit-font-smoothing:none;
+}
+.display{ font-size:clamp(38px,7vw,104px); }
+.display em{ font-style:normal; color:inherit; }
+.film-hero .display{ font-size:clamp(34px,5vw,90px); }
+.next .display{ font-size:clamp(34px,6vw,84px); }
+.display.logo-type{ font-size:clamp(44px,8vw,120px); }
+.h3.cam{ font-size:clamp(24px,2.4vw,32px); line-height:1.15; margin-bottom:14px; }
+
+.video-poster .play{ white-space:nowrap; }
+@media (max-width:560px){
+  .video-poster .play{ font-size:11px; gap:12px; }
+  .video-poster .play i{ width:60px; height:60px; }
+}
+.display .kk,.cam .kk{ margin-right:-0.08em; }
+
+/* ---------- additions: art credits, posters, warnings, title cards ---------- */
+.ap{ margin:0 -0.18em; }
+.art-credit{ margin:12px 0 0; font-size:12px; letter-spacing:.06em; color:var(--faint); max-width:none; }
+.art-credit a{ color:var(--muted); text-decoration:underline; text-decoration-color:var(--hair); text-underline-offset:3px; }
+.art-credit a:hover{ color:var(--fg); text-decoration-color:var(--accent); }
+.credits dd a{ text-decoration:underline; text-decoration-color:var(--hair); text-underline-offset:3px; }
+figure.poster{ margin:0 0 40px; }
+figure.poster img{ width:100%; border-radius:3px; cursor:zoom-in; }
+.tag.warn{ color:#f1c24b; border-color:rgba(241,194,75,.5); }
+.discretion{ font-size:14px; color:var(--muted); border-left:2px solid #f1c24b; padding:4px 0 4px 14px; margin:0 0 20px; max-width:none; }
+.discretion strong{ color:#f1c24b; font-weight:500; }
+.title-card{
+  width:100%; aspect-ratio:16/10; display:flex; flex-direction:column; justify-content:center; gap:14px;
+  padding:8%; background:#060505;
+  background-image:repeating-linear-gradient(0deg, rgba(255,255,255,.035) 0 1px, transparent 1px 4px);
+}
+.title-card .cam{ font-size:clamp(22px,2.6vw,36px); color:var(--fg); line-height:1.15; }
+.title-card small{ font-family:'SonyCam',var(--sans); font-size:13px; color:var(--faint); letter-spacing:.08em; }
+.poster-frame{ position:relative; width:100%; aspect-ratio:16/10; overflow:hidden; background:#000; }
+.poster-frame .poster-bg{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; filter:blur(22px) brightness(.45); transform:scale(1.15); }
+.poster-frame .poster-fg{ position:relative; height:100%; width:auto; margin:0 auto; object-fit:contain; }
+.film-card:hover .film-card-media .title-card{ background-color:#0d0b0b; }
+.video-poster.plain{ background:#060505; background-image:repeating-linear-gradient(0deg, rgba(255,255,255,.035) 0 1px, transparent 1px 4px); }
+.film-head .wrap{ display:grid; gap:clamp(32px,5vw,72px); align-items:end; }
+.film-head.has-poster .wrap{ grid-template-columns:1.4fr 1fr; }
+.film-head .head-poster{ aspect-ratio:2/3; border-radius:3px; }
+.film-head .tag{ display:inline-block; }
+.next:not(:has(img)){ background:#060505; background-image:repeating-linear-gradient(0deg, rgba(255,255,255,.03) 0 1px, transparent 1px 4px); }
+.split-media img.headshot{ object-position:center 30%; }
+@media (max-width:820px){ .film-head.has-poster .wrap{ grid-template-columns:1fr; } }
+.display .il,.cam .il{ margin-left:-0.14em; }
+.film-head.has-poster .display{ font-size:clamp(36px,4.3vw,66px); }
+.film-head.has-poster .wrap{ grid-template-columns:1.9fr 1fr; }
+@media (max-width:820px){ .film-head.has-poster .wrap{ grid-template-columns:1fr; } .film-head .head-poster{ max-width:70%; } }
