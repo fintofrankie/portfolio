@@ -396,3 +396,11 @@ figure.poster img{ width:100%; border-radius:3px; cursor:zoom-in; }
 .film-head.has-poster .display{ font-size:clamp(36px,4.3vw,66px); }
 .film-head.has-poster .wrap{ grid-template-columns:1.9fr 1fr; }
 @media (max-width:820px){ .film-head.has-poster .wrap{ grid-template-columns:1fr; } .film-head .head-poster{ max-width:70%; } }
+/* film cards as articles with several links */
+.film-card-media{ display:block; }
+.film-card .h3 a{ text-decoration:none; color:inherit; }
+.film-card .h3 a:hover{ color:var(--accent); }
+.card-links{ display:flex; flex-wrap:wrap; gap:14px 28px; }
+.film-card .art-credit{ margin-top:10px; }
+.film-card:hover .link{ border-color:var(--hair); gap:10px; }
+.film-card .link:hover{ border-color:var(--accent); gap:16px; }
