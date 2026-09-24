@@ -1,30 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About — Finto Films</title>
+  <meta name="description" content="Francesca Iannucci is an emerging trans filmmaker based in London, working across directing, cinematography and editing.">
+  <meta name="author" content="Francesca Iannucci">
+  <meta name="theme-color" content="#0b0a09">
+  <link rel="canonical" href="https://fintofilms.com/about.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Finto Films">
+  <meta property="og:title" content="About — Finto Films">
+  <meta property="og:description" content="Francesca Iannucci is an emerging trans filmmaker based in London, working across directing, cinematography and editing.">
+  <meta property="og:image" content="https://fintofilms.com/images/web/ice-lolly-king/end-me.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="work.html">Work</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header scrolled">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Finto Films — home">Finto <span>Films</span></a>
+      <nav class="nav" aria-label="Main"><a href="work.html">Work</a><a href="about.html" aria-current="page">About</a><a href="contact.html">Contact</a></nav>
+    </div>
+  </header>
 
-  <h1>About</h1>
-  <p>Hello! I'm Francesca Iannucci. An emerging trans filmmaker based in London, with a multifaceted background in directing, cinematography, and Editing. 
-    Currently finishing my feature film debut "The Ice Lolly King" (2026)
-    Notable for my cursed style of dark comedy, directing the sci-fi short film Break the Cycle (2024) and contributing to high-profile British films like One Life (2023). 
-  </p>
-  <p class="muted">Based in London.</p>
-  <div class="footer">© Finto Films</div>
+  <main id="main">
+    <section class="page-head">
+      <div class="wrap">
+        <p class="eyebrow"><span class="dot"></span>About</p>
+        <h1 class="display">Francesca <em>Iannucci</em></h1>
       </div>
-</body> 
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="wrap split" style="align-items:start">
+        <div class="split-media reveal"><img src="images/web/ice-lolly-king/prologue1-sm.jpg" srcset="images/web/ice-lolly-king/prologue1-sm.jpg 900w, images/web/ice-lolly-king/prologue1.jpg 2000w" sizes="(max-width:820px) 100vw, 50vw" alt="A child in a paper crown eats an ice lolly among dry corn stalks"></div>
+        <div class="reveal">
+          <p class="lede" style="color:var(--fg)">Hello! I'm Francesca, an emerging trans filmmaker based in London, with a multifaceted background in directing, cinematography and editing.</p>
+          <p>I'm known for a cursed style of dark comedy. I directed the sci-fi short <em>Break the Cycle</em> (2024), contributed to high-profile British films such as <em>One Life</em> (2023), and I'm currently finishing my feature debut, <em>The Ice Lolly King</em> (2026).</p>
+          <p class="credits-title" style="margin-top:48px">Disciplines</p>
+          <dl class="credits">
+            <div><dt>Directing</dt><dd>Features and shorts</dd></div>
+            <div><dt>Writing</dt><dd>Original screenplays</dd></div>
+            <div><dt>Camera</dt><dd>Cinematography</dd></div>
+            <div><dt>Post</dt><dd>Editing</dd></div>
+          </dl>
+          <p class="credits-title" style="margin-top:48px">Selected filmography</p>
+          <dl class="credits">
+            <div><dt>2026</dt><dd><a href="ice-lolly-king.html" style="text-decoration:none"><em>The Ice Lolly King</em></a><small>Feature · writer, director, producer, editor</small></dd></div>
+            <div><dt>2024</dt><dd><a href="break-the-cycle.html" style="text-decoration:none"><em>Break the Cycle</em></a><small>Short · writer, director, producer, editor</small></dd></div>
+            <div><dt>2023</dt><dd><em>One Life</em><small>Feature · crew</small></dd></div>
+          </dl>
+          <p style="margin-top:40px"><a class="btn" href="contact.html">Get in touch <span class="arr">→</span></a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© 2026 Finto Films · Francesca Iannucci · London</span>
+      <nav aria-label="Footer">
+        <a href="work.html">Work</a><a href="about.html">About</a><a href="mailto:fintofrankie@gmail.com">Email</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="site.js" defer></script>
+</body>
 </html>
