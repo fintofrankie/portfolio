@@ -3,8 +3,8 @@
    ========================================================== */
 
 @font-face{
-  font-family:'SonyCam';
-  src:url('fonts/sonycam/sonycam-original.woff2') format('woff2');
+  font-family:'TimecodeVHS';
+  src:url('fonts/timecode-vhs/timecode-vhs.woff2') format('woff2');
   font-display:swap;
 }
 
@@ -65,7 +65,7 @@ body::after{
   height:76px;
 }
 .brand{
-  font-family:'SonyCam', var(--sans); font-size:22px; line-height:1;
+  font-family:'TimecodeVHS', var(--sans); font-size:22px; line-height:1;
   text-decoration:none; letter-spacing:.04em; text-transform:uppercase;
   -webkit-font-smoothing:none; font-smooth:never;
 }
@@ -333,7 +333,7 @@ strong{ color:var(--fg); font-weight:500; }
 
 /* logo typeface */
 .display.logo-type{
-  font-family:'SonyCam', var(--sans); text-transform:uppercase;
+  font-family:'TimecodeVHS', var(--sans); text-transform:uppercase;
   font-size:clamp(44px,8vw,120px); line-height:1.12; letter-spacing:.02em;
   -webkit-font-smoothing:none;
 }
@@ -343,9 +343,9 @@ strong{ color:var(--fg); font-weight:500; }
 /* tighten the open-sided F so it matches the rest of the logo's spacing */
 .brand .kf,.display .kf,.cam .kf{ margin-right:-0.19em; }
 
-/* all big titles use the SonyCam logo face */
+/* all big titles use the logo face (Timecode VHS) */
 .display,.cam{
-  font-family:'SonyCam', var(--sans); font-weight:400; text-transform:uppercase;
+  font-family:'TimecodeVHS', var(--sans); font-weight:400; text-transform:uppercase;
   letter-spacing:.02em; line-height:1.12; -webkit-font-smoothing:none;
 }
 .display{ font-size:clamp(38px,7vw,104px); }
@@ -379,7 +379,7 @@ figure.poster img{ width:100%; border-radius:3px; cursor:zoom-in; }
   background-image:repeating-linear-gradient(0deg, rgba(255,255,255,.035) 0 1px, transparent 1px 4px);
 }
 .title-card .cam{ font-size:clamp(22px,2.6vw,36px); color:var(--fg); line-height:1.15; }
-.title-card small{ font-family:'SonyCam',var(--sans); font-size:13px; color:var(--faint); letter-spacing:.08em; }
+.title-card small{ font-family:'TimecodeVHS',var(--sans); font-size:13px; color:var(--faint); letter-spacing:.08em; }
 .poster-frame{ position:relative; width:100%; aspect-ratio:16/10; overflow:hidden; background:#000; }
 .poster-frame .poster-bg{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; filter:blur(22px) brightness(.45); transform:scale(1.15); }
 .poster-frame .poster-fg{ position:relative; height:100%; width:auto; margin:0 auto; object-fit:contain; }
@@ -409,3 +409,7 @@ figure.poster img{ width:100%; border-radius:3px; cursor:zoom-in; }
 .video-section .eyebrow{ margin-bottom:16px; }
 .video-section + .video-section{ padding-top:clamp(40px,5vw,64px) !important; }
 .video-poster .play{ text-shadow:0 1px 8px rgba(0,0,0,.7); }
+
+/* Timecode VHS has even built-in spacing, so the SonyCam letter tweaks are switched off */
+.brand .kf,.display .kf,.cam .kf,.display .kk,.cam .kk,.display .il,.cam .il,.ap{ margin:0 !important; }
+.display,.cam,.brand{ word-spacing:.12em; }
