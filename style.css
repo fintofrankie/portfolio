@@ -413,3 +413,30 @@ figure.poster img{ width:100%; border-radius:3px; cursor:zoom-in; }
 /* Timecode VHS has even built-in spacing, so the SonyCam letter tweaks are switched off */
 .brand .kf,.display .kf,.cam .kf,.display .kk,.cam .kk,.display .il,.cam .il,.ap{ margin:0 !important; }
 .display,.cam,.brand{ word-spacing:.12em; }
+
+/* ---------- quieter labels: sentence case, no tracking, sit under headings ---------- */
+.eyebrow,.credits-title{
+  font-size:16px; font-weight:400; letter-spacing:0; text-transform:none;
+  color:var(--muted); margin:0 0 14px;
+}
+.eyebrow.below{ margin:14px 0 0; }
+.eyebrow .dot{ display:none; }
+.section-head .eyebrow.below{ margin-top:10px; }
+.hero .hero-name{
+  font-size:clamp(17px,1.5vw,20px); color:rgba(239,233,225,.92); font-weight:400;
+  text-shadow:0 1px 3px rgba(0,0,0,.7), 0 0 24px rgba(0,0,0,.5) !important; margin-top:18px;
+}
+.hero .hero-name + .lede{ margin-top:10px; }
+.credits-title{ color:var(--fg); font-size:17px; margin-bottom:12px; }
+.next .eyebrow.below{ margin-bottom:22px; }
+.eyebrow.below + p{ margin-top:22px; }
+
+/* labels in the logo face, like a camcorder's on-screen display */
+.eyebrow,.credits-title{
+  font-family:'TimecodeVHS', var(--sans); text-transform:uppercase;
+  font-size:15px; letter-spacing:.05em; word-spacing:.15em; line-height:1.4;
+  color:rgba(239,233,225,.62); -webkit-font-smoothing:none;
+}
+.credits-title{ color:rgba(239,233,225,.8); font-size:15px; }
+.hero .hero-name{ font-size:clamp(15px,1.3vw,18px); color:rgba(239,233,225,.95); }
+.hero .hero-name + .lede{ margin-top:16px; }
